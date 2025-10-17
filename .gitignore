@@ -1,0 +1,208 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Python Environment
+*.env
+.env.local
+.env.*.local
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.d
+
+# DREAMPlace specific
+DREAMPlace/build/
+DREAMPlace/install/results/
+DREAMPlace_local/*.log
+DREAMPlace/core.*
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+Makefile
+
+# Routing results
+test_result/*.gr
+test_result/*.txt
+test_result/*.dat
+test_result/*.out
+
+# nthuRouter3 outputs
+nthuRouter3/output
+nthuRouter3/*.log
+nthuRouter3/*.rpt
+nthuRouter3/*.out
+nthuRouter3/*.o
+nthuRouter3/*.gr
+nthuRouter3/NthuRoute
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Logs
+*.log
+logs/
+*.out
+
+# UV lock (keep uv.lock but ignore UV cache)
+.uv/
+
+# Benchmark results (keep example files but ignore generated results)
+results/
+*.pl
+*.gp
+*.lg
+*.dp
+
+# Large data files (optional - uncomment if needed)
+# *.aux
+# *.nodes
+# *.nets
+# *.wts
+# *.scl
+# *.shapes
+# *.route
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+site/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Profiling
+*.prof
+*.lprof
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Editor backups
+*.bak
+*.backup
+*~
+
+# Package manager
+node_modules/
+package-lock.json
+yarn.lock
+
+# Core dumps
+core
+core.*
+
+# Compiled Object files
+*.slo
+*.lo
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Static libraries
+*.lai
+*.la
+*.lib
+
+# Shared libraries
+*.so.*
+*.dylib
+
+# Executables
+*.i*86
+*.x86_64
+*.hex
+

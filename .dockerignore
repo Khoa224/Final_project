@@ -1,0 +1,63 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Build directories - IMPORTANT: Exclude these to avoid CMake cache conflicts
+DREAMPlace/build/
+DREAMPlace/install/
+build/
+install/
+
+# CMake cache files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled objects
+*.o
+*.a
+nthuRouter3/NthuRoute
+nthuRouter3/*.o
+
+# Results and outputs
+test_result/*.gr
+test_result/*.txt
+test_result/*.dat
+nthuRouter3/output
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Git
+.git/
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Logs
+*.log
+
+# UV cache
+.uv/
+
+# Documentation (optional - uncomment if you want to exclude)
+# *.md
+# images/
+

@@ -52,6 +52,14 @@ RUN pip install --no-cache-dir \
     torch_optimizer==0.3.0 \
     ncg_optimizer==0.2.2
 
+# Install FastAPI dependencies
+RUN pip install --no-cache-dir \
+    fastapi>=0.104.0 \
+    uvicorn[standard]>=0.24.0 \
+    pydantic>=2.0.0 \
+    python-multipart>=0.0.6 \
+    aiofiles>=23.0.0
+
 # Copy project files
 COPY . /workspace/FinalProject/
 
@@ -84,31 +92,16 @@ RUN mkdir -p /workspace/FinalProject/test_result \
 WORKDIR /workspace/FinalProject
 
 # Set environment variables
-ENV PYTHONPATH="/workspace/FinalProject:/workspace/FinalProject/DREAMPlace_local/install:${PYTHONPATH}"
+ENV PYTHONPATH="/workspace/FinalProject:/workspace/FinalProject/DREAMPlace/install:${PYTHONPATH}"
 ENV PATH="/workspace/FinalProject/nthuRouter3:${PATH}"
 
-# Make run_complete_flow.py executable
-RUN chmod +x run_complete_flow.py || true
+# Expose FastAPI port
+EXPOSE 8000
 
-# Default command - run the complete flow
-CMD ["python", "run_complete_flow.py"]
+# Default command - run FastAPI server
+CMD ["python", "start_api.py"]
 
-# Alternative commands you can use:
-# For placement only:
-#   docker run <image> python DREAMPlace/dreamplace/Placer.py <config.json>
-#
-# For routing only:
-#   docker run <image> /workspace/FinalProject/nthuRouter3/NthuRoute \
-#       --input=<input.gr> --output=<output> [options]
-#
-# For complete flow:
-#   docker run <image> python run_complete_flow.py
-#
-# Interactive shell:
-#   docker run -it <image> /bin/bash
-#
-# Example nthuRouter3 usage:
-#   NthuRoute --input=adaptec1.capo70.2d.35.50.90.gr --output=output \
-#       --p2-max-iteration=150 --p2-init-box-size=25 --p2-box-expand-size=1 \
-#       --overflow-threshold=0 --p3-max-iteration=20 --p3-init-box-size=10 \
-#       --p3-box-expand-size=15 --monotonic-routing=0
+# Alternative commands:
+# For complete flow:  docker run <image> python run_complete_flow.py adaptec1
+# For bash shell:     docker run -it <image> /bin/bash
+# For API server:     docker run -p 8000:8000 <image> python start_api.py

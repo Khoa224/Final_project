@@ -5,15 +5,20 @@ description = "Add your description here"
 requires-python = ">=3.9"
 dependencies = [
     "cairocffi>=0.9.0",
+    "fastapi>=0.120.0",
+    "ipython>=8.18.1",
     "matplotlib>=2.2.2",
     "ncg-optimizer==0.2.2",
     "numpy>=1.15.4",
+    "pandas>=2.3.3",
     "patool>=1.12",
     "pkgconfig>=1.4.0",
+    "plotly>=6.3.1",
     "pyunpack>=0.1.2",
     "scipy>=1.1.0",
     "setuptools>=39.1.0",
     "shapely>=1.7.0",
     "torch>=1.6.0",
     "torch-optimizer==0.3.0",
+    "uvicorn>=0.38.0",
 ]
